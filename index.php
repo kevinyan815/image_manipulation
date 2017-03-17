@@ -29,7 +29,7 @@ $smallImg = imagecreate(1181, 1476);//小合成图
 imagecopyresampled($smallImg, $groundImage, 0, 0, 0, 0, imagesx($smallImg), imagesy($smallImg), imagesx($groundImage), imagesy($groundImage));
 
 //生成合成图
-imagepng($groundImage, './bigPic.png');
+imagecreatetruecolor($groundImage, './bigPic.png');
 imagepng($smallImg, './smallPic.png');
 
 //释放图片资源
